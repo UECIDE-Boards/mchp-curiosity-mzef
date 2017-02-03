@@ -1,0 +1,16 @@
+Source: mchp-curiosity-mzef
+Section: libraries
+Priority: extra
+Maintainer: Matt Jenkins <matt@majenko.co.uk>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.4
+
+Package: mchp-curiosity-mzef
+Section: boards
+Architecture: all
+XBSC-Group: Microchip
+Depends: chipkit
+Description: Curiosity PIC32MZ EF
+
+
+

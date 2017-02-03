@@ -1,0 +1,5 @@
+Board_Data.c boards//mchp-curiosity-mzef
+Board_Defs.h boards//mchp-curiosity-mzef
+EFADC.c boards//mchp-curiosity-mzef
+board.txt boards//mchp-curiosity-mzef
+boot.c boards//mchp-curiosity-mzef

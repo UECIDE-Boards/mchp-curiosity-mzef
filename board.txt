@@ -1,0 +1,29 @@
+name=microchip-curiosity=mzef
+description=Curiosity PIC32 MZ EF
+group=Microchip
+
+platform=pic32
+board=_BOARD_CURIOSITY_MZEF_
+board.define=-D_USB::-D_USE_USB_FOR_SERIAL_
+ccflags=ffff
+ldscript=curiosity-mzef.ld
+
+upload.maximum_size=520192
+upload.speed=115200
+
+build.mcu=32MZ2048EFM100
+build.f_cpu=200000000UL
+build.core=chipkit
+core=chipkit
+ldcommon=chipKIT-application-COMMON-MZ-clean.ld
+family=pic32
+
+build.files=EFADC.c::boot.c
+
+board.usb.driver = ${harmony.usbhs}
+
+core.ldflags=
+#${core:root}/pic32/cpp-startup.S
+
+ldflags=${optimize}::-G${compiler.smalldata}::-Wl,--gc-sections,-Map,${build.path}/${filename}.map::-mdebugger::-mno-peripheral-libs::${extra.flags}
+
